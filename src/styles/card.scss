@@ -1,0 +1,17 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    border: 1px solid black;
+
+    img{
+        max-height: 300px;
+    }
+
+    #btn-close{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+}
