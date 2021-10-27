@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect, FormEvent } from "react";
+import { Link } from "react-router-dom";
 import { Card } from "../components/Card";
 import { Nav } from "../components/Nav";
 import '../styles/listagem.scss'
@@ -45,8 +46,16 @@ export function Listagem() {
         setFind(pesquisarPor);
     }
 
-    async function delItem() {
-        bebidas.splice(0, 1)
+    async function delItem(index:any) {
+        //adiciona o state bebidas a uma varivel auxiliar
+        const bebidasAux = bebidas.slice()
+
+        //remove o index desejado da variavel auxiliar
+        bebidasAux.splice(index,1)
+
+        //seta o state bebidas com o valor da variável auxiliar
+        setBebidas(bebidasAux)
+        
     }
 
     return (
@@ -62,19 +71,17 @@ export function Listagem() {
                 </form>
                 <div id="cards-list">
                     {   
-                        bebidas.map((bebida) => {
+                        bebidas.map((bebida, index) => {
                             if (find !== '') {
                                 if (bebida.name.includes(find)) {
-                                    return <Card image={bebida.image_url} titulo={bebida.name} delItem={delItem} descricao={bebida.description} />
+                                    return <Card image={bebida.image_url} titulo={bebida.name} delItem={()=>delItem(index)} descricao={bebida.description} />
                                 }
                             } else {
-                                return <Card image={bebida.image_url} titulo={bebida.name} delItem={delItem} descricao={bebida.description} />
+                                return <Card image={bebida.image_url} titulo={bebida.name} delItem={()=>delItem(index)} descricao={bebida.description} />
                             }
-
+                            
                         })}
-
                 </div>
-
             </main>
         </div>
     )

@@ -12,7 +12,7 @@ export function Cadastro(){
     async function handleCadastro(event:FormEvent){
         event.preventDefault()
         let indice = 0
-        //verifica se já existe registro no localStorage
+        //verifica se já existe algum registro no localStorage
         if(localStorage[0] !== undefined){
             indice = localStorage.length
         }
