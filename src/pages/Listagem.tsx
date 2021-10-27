@@ -1,3 +1,5 @@
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { useState, useEffect, FormEvent } from "react";
 import { Link } from "react-router-dom";
@@ -59,15 +61,17 @@ export function Listagem() {
     }
 
     return (
-        <div id="content">
+        <div >
             <Nav />
-            <main>
+            <main id="content">
                 <form onSubmit={handleFind}>
-                    <input type="text"
+                    <input 
+                        placeholder="O que deseja pesquisar?"
+                        type="text"
                         onChange={event => { setPesquisarPor(event.target.value) }}
                         value={pesquisarPor}
                     />
-                    <button type="submit">Pesquisar</button>
+                    <button type="submit">Pesquisar <FontAwesomeIcon icon={faSearch}/></button>
                 </form>
                 <div id="cards-list">
                     {   

@@ -1,6 +1,5 @@
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ButtonHTMLAttributes } from 'react'
 
 import '../styles/card.scss'
 
@@ -19,7 +18,7 @@ export function Card(props: CardProps){
             </div>
             <img src={props.image} alt="" />
             <h4>{props.titulo}</h4>
-            <p>{props.descricao}</p>
+            <p>{props.descricao.substr(0,100)+'...'}</p>
         </div>
     )
 }

@@ -2,15 +2,46 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;
-    border: 1px solid black;
-    img{
-        max-height: 300px;
-    }
+    width: 350px;
+    background: #f8f8ff;
+    padding: 10px 5px;
+    border-radius: 5px;
+    
 
     #btn-close{
+        padding: 8px;
         width: 100%;
         display: flex;
         justify-content: end;
+        
+        button{
+            border: none;
+            font-size: 24px;
+            color: #DEA000;
+            width: 24px;
+            height: 24px;
+
+            &:hover{
+                cursor: pointer;
+                filter: brightness(0.9);
+            }
+        }
     }
+
+    img{
+        padding: 8px;
+        max-height: 300px;
+    }
+
+    h4{
+        padding: 8px;
+        font-size: 16px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    p{
+        padding: 8px;
+    }
+   
 }
