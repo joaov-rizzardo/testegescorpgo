@@ -1,4 +1,4 @@
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import '../styles/card.scss'
@@ -14,7 +14,7 @@ export function Card(props: CardProps){
     return(
         <div className="card">
             <div id="btn-close">
-                <button onClick={() => props.delItem(index)}><FontAwesomeIcon icon={faWindowClose} /></button>
+                <button onClick={() => props.delItem(index)}><FontAwesomeIcon icon={faTimes} /></button>
             </div>
             <img src={props.image} alt="" />
             <h4>{props.titulo}</h4>

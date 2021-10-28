@@ -7,7 +7,6 @@ export function Nav() {
     return (
         <nav>
             <div>
-                <img src={Beer} alt="" />
                 <h2>Desafio ReactJS</h2>
             </div>
 

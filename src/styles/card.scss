@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 350px;
-    background: #f8f8ff;
+    width: 300px;
+    border: 1px solid #dddada;
     padding: 10px 5px;
     border-radius: 5px;
     
@@ -17,7 +17,7 @@
         button{
             border: none;
             font-size: 24px;
-            color: #DEA000;
+            color: black;
             width: 24px;
             height: 24px;
 
@@ -42,6 +42,8 @@
 
     p{
         padding: 8px;
+        color: rgb(31, 29, 29);
+        
     }
    
 }

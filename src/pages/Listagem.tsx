@@ -61,7 +61,7 @@ export function Listagem() {
     }
 
     return (
-        <div >
+        <div id="principal">
             <Nav />
             <main id="content">
                 <form onSubmit={handleFind}>
